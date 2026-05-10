@@ -374,15 +374,18 @@ footer { background:#040404; padding:36px 48px; border-top:1px solid rgba(255,25
           <div class="con-text"><strong>Registration</strong>WABEVCO Industries Limited<br>RC: 5761 &mdash; Corporate Affairs Commission</div>
         </div>
       </div>
-      <form class="con-form" onsubmit="return false;">
+      <div data-fs-success style="display:none;padding:20px;background:rgba(192,0,30,0.1);border:1px solid var(--red);color:#fff;margin-bottom:16px;font-size:14px;letter-spacing:1px;">
+        Thank you. Your message has been received. We will respond within one working day.
+      </div>
+      <form class="con-form" action="https://formspree.io/f/xwvywyvj" method="POST">
         <div class="fg-row">
-          <div class="fg"><label>First Name</label><input type="text" placeholder="Your first name"></div>
-          <div class="fg"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+          <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="Your first name" required></div>
+          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Your last name" required></div>
         </div>
-        <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
-        <div class="fg"><label>Organisation</label><input type="text" placeholder="Company name"></div>
-        <div class="fg"><label>Subject</label><input type="text" placeholder="How can we help?"></div>
-        <div class="fg"><label>Message</label><textarea rows="5" placeholder="Tell us about your enquiry..."></textarea></div>
+        <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com" required></div>
+        <div class="fg"><label>Organisation</label><input type="text" name="organisation" placeholder="Company name"></div>
+        <div class="fg"><label>Subject</label><input type="text" name="subject" placeholder="How can we help?" required></div>
+        <div class="fg"><label>Message</label><textarea rows="5" name="message" placeholder="Tell us about your enquiry..." required></textarea></div>
         <button type="submit" class="btn-red" style="width:100%;text-align:center;font-family:Raleway,sans-serif;border:1px solid var(--red);">Send Message</button>
       </form>
     </div>
